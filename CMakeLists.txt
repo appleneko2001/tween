@@ -9,3 +9,9 @@ add_library(tween
         tween.cpp
         tween.h
 )
+
+target_include_directories(
+        tween INTERFACE
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
+)
